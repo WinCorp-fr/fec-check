@@ -1,0 +1,15 @@
+JournalCode|JournalLib|EcritureNum|EcritureDate|CompteNum|CompteLib|CompAuxNum|CompAuxLib|PieceRef|PieceDate|EcritureLib|Debit|Credit|EcritureLet|DateLet|ValidDate|Montantdevise|Idevise
+AN|A nouveaux|1|20250101|10100000|Capital|||P1|20250101|Capital|0|10000,00|||20250101||
+AN|A nouveaux|1|20250101|51200000|Banque Fictive|||P1|20250101|Banque Fictive|10000,00|0|||20250101||
+VT|Ventes|1|20250115|41100000|Clients|CLI001|Client Imaginaire|P1|20250115|Clients|1200,00|0|||20250115||
+VT|Ventes|1|20250115|70600000|Prestations|||P1|20250115|Prestations|0|1000,50|||20250115||
+VT|Ventes|1|20250115|44571000|TVA collectée|||P1|20250115|TVA collectée|0|200,00|||20250115||
+AC|Achats|1|20250120|60640000|Fournitures|||P1|20250120|Fournitures|300,00|0|||20250120||
+AC|Achats|1|20250120|44566000|TVA déductible|||P1|20250120|TVA déductible|60,00|0|||20250120||
+AC|Achats|1|20250120|40100000|Fournisseurs|FRN001|Fournisseur Imaginaire|P1|20250120|Fournisseurs|0|360,00|||20250120||
+BQ|Banque|1|20250210|51200000|Banque Fictive|||P1|20250210|Banque Fictive|1200,00|0|||20250210||
+BQ|Banque|1|20250210|41100000|Clients|CLI001|Client Imaginaire|P1|20250210|Clients|0|1200,00|||20250210||
+CA|Caisse|1|20250301|53000000|Caisse|||P1|20250301|Caisse|100,00|0|||20250301||
+CA|Caisse|1|20250301|51200000|Banque Fictive|||P1|20250301|Banque Fictive|0|100,00|||20250301||
+CA|Caisse|2|20250305|62510000|Déplacements|||P2|20250305|Déplacements|40,00|0|||20250305||
+CA|Caisse|2|20250305|53000000|Caisse|||P2|20250305|Caisse|0|40,00|||20250305||

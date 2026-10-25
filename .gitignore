@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+# Ne jamais versionner un FEC réel : seuls les fichiers fictifs de tests/fixtures sont admis.
+*.txt
+!tests/fixtures/*.txt
+*.csv
+*.xlsx

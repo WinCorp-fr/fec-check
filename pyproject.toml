@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fec-check"
+version = "1.0.0"
+description = "Validateur gratuit du Fichier des Écritures Comptables (FEC) : contrôles de format et contrôles comptables, en local."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "WinCorp", email = "contact@wincorp.fr" }]
+keywords = ["fec", "comptabilite", "expert-comptable", "controle-fiscal", "dgfip", "claude", "skill"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: French",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = ["pydantic>=2.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.2", "mypy>=1.8"]
+
+[project.urls]
+Accueil = "https://wincorp.fr"
+Source = "https://github.com/WinCorp-fr/fec-check"
+
+[project.scripts]
+fec-check = "fec_check.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+# Fichiers générés depuis la source privée : on ne les retouche jamais ici.
+"src/fec_check/{fec,pcg,controles,pydantic_types}.py" = ["ALL"]
+"tests/moteur/*.py" = ["ALL"]
+
+[tool.ruff.format]
+exclude = [
+    "src/fec_check/fec.py",
+    "src/fec_check/pcg.py",
+    "src/fec_check/controles.py",
+    "src/fec_check/pydantic_types.py",
+    "tests/moteur/*.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+mypy_path = "src"
+
+[tool.coverage.run]
+source = ["fec_check"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 90
