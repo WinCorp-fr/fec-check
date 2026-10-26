@@ -1,6 +1,6 @@
 # Journal des versions
 
-## 1.0.0 (à la publication)
+## 1.0.0 (25 octobre 2026)
 
 Première version publique.
 
